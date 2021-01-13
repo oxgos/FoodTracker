@@ -45,6 +45,7 @@
                                     <outlet property="nameLabel" destination="9jA-0N-76S" id="Z87-xH-R2K"/>
                                     <outlet property="photoImageView" destination="TD2-15-D8L" id="uF2-7T-KMU"/>
                                     <outlet property="ratingControl" destination="W1S-K4-qO3" id="hTN-RI-cPz"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="OJw-qo-BZA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,19 +71,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qza-UX-a7n">
-                                <rect key="frame" x="16" y="76" width="343" height="420"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qza-UX-a7n">
+                                <rect key="frame" x="16" y="64" width="343" height="420"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05l-Xt-gyj">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KJF-LK-6hK"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="R09-uM-YdF">
-                                        <rect key="frame" x="11.5" y="42" width="320" height="320"/>
+                                        <rect key="frame" x="11.5" y="48" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="R09-uM-YdF" secondAttribute="height" multiplier="1:1" id="CVr-GG-Iqr"/>
@@ -91,8 +95,8 @@
                                             <outletCollection property="gestureRecognizers" destination="fQp-Cf-or9" appends="YES" id="DAe-aF-L5B"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3oY-qC-5nt" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="45.5" y="370" width="252" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3oY-qC-5nt" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="45.5" y="376" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -173,9 +177,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKq-nS-9pp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="15.742128935532236"/>
+            <point key="canvasLocation" x="1318" y="-371"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OJw-qo-BZA"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
         <systemColor name="systemBackgroundColor">
