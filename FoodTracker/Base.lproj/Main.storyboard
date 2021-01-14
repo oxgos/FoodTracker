@@ -97,6 +97,9 @@
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3oY-qC-5nt" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
                                         <rect key="frame" x="45.5" y="376" width="252" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="KlW-B4-lll"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
